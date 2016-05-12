@@ -47,6 +47,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Aclonica);
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -551,7 +552,7 @@ a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	clear: both;
+
 	display: block;
 	float: left;
 	width: 100%;
@@ -918,4 +919,160 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+#masthead{
+height: 100px;
+border-bottom: 5px double red;
+
+}
+.before-menu_left{
+	float:left;
+	display: block;
+}
+#site-navigation{
+	float: left;
+	display: block;
+	text-align: center;
+	font-family: Aclonica;
+	font-size: 13px;
+}
+.site-branding{
+	float:left;
+	display: block;
+	text-align: center;
+
+}
+.site-branding{
+	font-family: Aclonica;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+
+#site-navigation2{
+	float: left;
+	display: block;
+	text-align: center;
+	font-family: Aclonica;
+	font-size: 13px;
+
+}
+.after-menu_rigth{
+  float: left;
+	display: block;
+
+}
+.menu li{
+	  float:right;
+	  display: block;
+    padding: 10px;
+    /*background-color: #dddddd;*/
+}
+.menu-menu-left-container a:hover{
+   	color: red;
+		font-size: 104%;
+		text-decoration: overline;
+
+}
+.menu-menu-right-container a:hover{
+   	color: red;
+		font-size: 104%;
+		text-decoration: overline;
+}
+.site-branding a:hover{
+	color: red;
+	font-size: 104%;
+	text-decoration: none;
+}
+
+
+
+
+/********************************************************************************/
+@media screen and (max-width: 1277px) {
+	#site-navigation2{
+		font-size: 8px;
+		background-color: blue;
+
+	}
+	#site-navigation{
+		font-size: 9px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	#site-navigation{
+		clear: both;
+		font-size: 15px;
+		margin-left: -40%;
+	}
+	.site-branding{
+		clear: both;
+		font-size: 15px;
+	}
+
+	#site-navigation2{
+		clear: both;
+		background-color: yellow;
+		font-size: 15px;
+    margin-left: -37%;
+	}
+	#masthead{
+	height: 160px;
+	border-bottom: 5px double red;
+
+	}
+
+}
+@media screen and (max-width: 768px) {
+	#site-navigation{
+		clear: both;
+		font-size: 15px;
+		margin-left: -40%;
+	}
+	.site-branding{
+		clear: both;
+		font-size: 15px;
+	}
+
+	#site-navigation2{
+		clear: both;
+		background-color: green;
+		font-size: 15px;
+    margin-left: -37%;
+	}
+	#masthead{
+	height: 160px;
+	border-bottom: 5px double red;
+
+	}
+
+}
+@media screen and (max-width: 600px) {
+	#site-navigation{
+		/*clear: both;
+		font-size: 15px;
+		margin-left: -40%;*/
+		display: none;
+	}
+	.site-branding{
+		clear: both;
+		font-size: 15px;
+	}
+
+	#site-navigation2{
+		/*clear: both;
+		background-color: red;
+		font-size: 15px;
+		margin-left: -37%;*/
+		display: none;
+	}
+	#masthead{
+	height: 160px;
+	border-bottom: 5px double red;
+
+	}
+
 }

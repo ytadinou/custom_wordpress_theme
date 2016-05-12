@@ -25,26 +25,33 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'thido_photography' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
+
+		<div class="before-menu_left col-lg-2 col-md-2 col-sm-12 col-xs-12" >   </div>
+		<nav id="site-navigation" class="main-navigation col-lg-2 col-md-2 col-sm-12 col-xs-12" role="navigation" >
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'thido_photography' ); ?></button>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		</nav><!-- #site-navigation -->
+		<div class="site-branding col-lg-4 col-md-4 col-sm-12 col-xs-12">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Thido-Photography</a></h1>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Thido-Photography</a></p>
 			<?php
 			endif;
 
 			$description = get_bloginfo( 'description', 'display' );
 			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+				<!-- <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p> -->
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+		<nav id="site-navigation2" class="main-navigation col-lg-2 col-md-2 col-sm-12 col-xs-12" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'thido_photography' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary2', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
+		<div class="after-menu_rigth col-lg-2 col-md-2 col-sm-12 col-xs-12" > </div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

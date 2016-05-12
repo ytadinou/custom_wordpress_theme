@@ -120,6 +120,13 @@ function thido_photography_scripts() {
 
 	wp_enqueue_script( 'thido_photography-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+	/* add bootstrap scripts*/
+	wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/bootstrap.min.css' );
+
+	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/jquery-1.12.3.min.js', array(), '1.12.3', true );
+
+	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/bootstrap.min.js', array('jquery'), '3.3.6', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
